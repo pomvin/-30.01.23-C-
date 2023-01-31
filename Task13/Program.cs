@@ -4,8 +4,24 @@
 //32679 -> 6
 Console.Clear();
 
-Console.Write("Введите любое число a: ");
-int a = int.Parse(Console.ReadLine()!);
-int res1 = (a % 10) / 1;
+Console.Write("Введите любое число: ");
+int num = int.Parse(Console.ReadLine()!);
 
-Console.Write($"{res1}");
+while (num > 999)
+{
+    num = num / 10;
+}
+if (num < 99)
+{
+    Console.WriteLine($"Третьей цифры нет"!);
+}
+else
+{
+    num = num % 10;
+    Console.WriteLine($"{num}"!);
+}
+
+
+
+
+
